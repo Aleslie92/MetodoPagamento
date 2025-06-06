@@ -7,7 +7,7 @@ abstract class MetodoPagamento {
 
     }
 
-    public abstract void paga();
+    public abstract void paga(double sommaDaSpendere);
 
     public double getImporto() {
         return importo;
@@ -18,6 +18,6 @@ abstract class MetodoPagamento {
     }
 
     public void verificaImporto() {
-        System.out.println("Importo da pagare: " + importo + " euro");
+        System.out.println("Nel Portfolio hai: " + getImporto() + " euro");
     }
 }

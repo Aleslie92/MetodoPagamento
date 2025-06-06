@@ -1,4 +1,5 @@
 public class CartaDiCredito extends MetodoPagamento {
+
     private double importo;
 
     public CartaDiCredito(double importo) {
@@ -6,18 +7,18 @@ public class CartaDiCredito extends MetodoPagamento {
     }
 
     @Override
-     public void verificaImporto() {
+    public void verificaImporto() {
         super.verificaImporto();
         System.out.println("Controllo disponibilità sulla carta...");
-     }
+    }
 
     @Override
-    public void paga(double importo) {
-        if(getImporto() >= importo) {
-            setImporto(getImporto()-importo);
-            System.out.println("Pagamento con carta di credito effettuato: ");
+    public void paga(double sommaDaSpendere) {
+        if (getImporto() >= sommaDaSpendere) {
+            System.out.println("Pagamento effettuato con Carta di Credito, importo: " + sommaDaSpendere + " euro");
+            setImporto(getImporto() - sommaDaSpendere);
         } else {
-            System.out.println("Soldi insufficenti!");
+            System.out.println("Saldo insufficiente sulla Carta di Credito per pagare " + sommaDaSpendere + " euro");
         }
     }
 }
