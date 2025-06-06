@@ -7,17 +7,17 @@ public class PayPal extends MetodoPagamento {
     }
 
     public void print() {
-        System.out.println("PayPal reggistrata con successo, importo : " + this.importo);
+        System.out.println("PayPal reggistrata con successo, importo attuale : " + getImporto() + " euro");
     };
 
     @Override
     public void paga() {
-        System.out.println("Pagamento effettuato con PayPal, importo : " + this.importo);
+        System.out.println("Pagamento effettuato con PayPal, importo : " + getImporto() + " euro");
     }
 
     @Override
     public void verificaImporto() {
-        System.out.println("Verifica importo PayPal : " + this.importo);
+        System.out.println("Verifica importo PayPal : " + getImporto() + " euro");
     }
 
 }
